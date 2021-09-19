@@ -6,3 +6,7 @@ start:
 - npm i;
 - enjoy;
 
+tasks:
+- gulp(dev);
+- build(prod);
+
