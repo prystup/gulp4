@@ -92,7 +92,7 @@ const scripts = () => {
 
 //***********  Minimize Images **********/
 const images = () => {
-  return src(['src/img/**.jpg', 'src/img/**.png', 'src/img/**.jpeg'])
+  return src(['src/img/**.jpg', 'src/img/**.png', 'src/img/**.jpeg', 'src/img/**.ico'])
     .pipe(imagemin())
     .pipe(dest('app/img'));
 };
@@ -141,6 +141,7 @@ const watchFiles = () => {
   });
 
   watch('src/scss/**/**.scss', styles);
+  watch('src/partials/**', htmlInclude);
   watch('src/index.html', htmlInclude);
   watch('src/img/**.jpg', images);
   watch('src/img/**.png', images);
